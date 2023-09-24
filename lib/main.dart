@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/styles/themes/ThemeData.dart';
 import 'package:hekta/features/login_register/presentation/views/choose_identity.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Future.delayed(const Duration(milliseconds: 2000));
+  FlutterNativeSplash.remove();
   runApp(const MainApp());
 }
 

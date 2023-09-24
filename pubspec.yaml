@@ -23,7 +23,10 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter_native_splash:
+  android: true
+  ios: true
   background_image: "assets/images/splash.jpg"
+  image: "assets/images/splash.jpg"
   android_gravity: fill
 
 flutter:
