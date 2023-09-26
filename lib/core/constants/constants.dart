@@ -1,5 +1,4 @@
 // ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
@@ -48,12 +47,13 @@ Future<dynamic> navigator(
 Future<dynamic> navigatorPushRemove(
         {required BuildContext context, required Widget widget}) =>
     Navigator.pushAndRemoveUntil(
-        context,
-        PageTransition(
-          child: widget,
-          type: PageTransitionType.rightToLeft,
-        ),
-        (route) => false);
+      context,
+      PageTransition(
+        child: widget,
+        type: PageTransitionType.rightToLeft,
+      ),
+      (route) => false,
+    );
 
 extension IntExtension on int? {
   int validate({int value = 0}) {

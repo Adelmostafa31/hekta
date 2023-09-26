@@ -42,7 +42,10 @@ class text_form extends StatelessWidget {
         validator: validate,
         obscureText: obscure,
         maxLines: 1,
-        style: TextStyle(fontSize: 20.sp, color: defaultColor5()),
+        style: TextStyle(
+          fontSize: 20.sp,
+          color: defaultColor5(),
+        ),
         onTapOutside: (event) {
           FocusManager.instance.primaryFocus?.unfocus();
         },
@@ -53,7 +56,10 @@ class text_form extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
           ),
           focusColor: defaultColor1(),
-          hintStyle: TextStyle(color: color, fontSize: hintFont),
+          hintStyle: TextStyle(
+            color: color,
+            fontSize: hintFont,
+          ),
         ),
       ),
     );

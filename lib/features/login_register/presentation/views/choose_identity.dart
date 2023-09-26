@@ -1,5 +1,4 @@
 // ignore_for_file: camel_case_types
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
@@ -12,8 +11,15 @@ class choose_identity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: defaultColor3(),
+        image: const DecorationImage(
+            image: AssetImage(
+              'assets/images/background.jpg',
+            ),
+            fit: BoxFit.cover),
+      ),
       alignment: AlignmentDirectional.center,
-      color: defaultColor3(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -27,7 +33,10 @@ class choose_identity extends StatelessWidget {
             decoration: decoration,
             child: TextButton(
               onPressed: () {
-                navigator(context: context, widget: const choose_login_register());
+                navigator(
+                  context: context,
+                  widget: const choose_login_register(),
+                );
               },
               child: Text('Customer', style: style1),
             ),

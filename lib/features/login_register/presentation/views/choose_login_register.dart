@@ -13,8 +13,16 @@ class choose_login_register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: defaultColor3(),
+        image: const DecorationImage(
+          image: AssetImage(
+            'assets/images/background.jpg',
+          ),
+          fit: BoxFit.cover,
+        ),
+      ),
       alignment: AlignmentDirectional.center,
-      color: defaultColor3(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -28,7 +36,10 @@ class choose_login_register extends StatelessWidget {
             decoration: decoration,
             child: TextButton(
               onPressed: () {
-                navigator(context: context, widget: const register());
+                navigator(
+                  context: context,
+                  widget: const register(),
+                );
               },
               child: Text('Sign Up', style: style1),
             ),
@@ -41,7 +52,10 @@ class choose_login_register extends StatelessWidget {
             decoration: decoration,
             child: TextButton(
               onPressed: () {
-                navigator(context: context, widget: const login());
+                navigator(
+                  context: context,
+                  widget: const login(),
+                );
               },
               child: Text('Sign In', style: style1),
             ),

@@ -6,7 +6,7 @@ import 'package:hekta/features/login_register/presentation/views/choose_identity
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Future.delayed(const Duration(milliseconds: 2000));
+  await Future.delayed(const Duration(milliseconds: 500));
   FlutterNativeSplash.remove();
   runApp(const MainApp());
 }
