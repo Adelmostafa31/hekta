@@ -14,10 +14,11 @@ class choose_identity extends StatelessWidget {
       decoration: BoxDecoration(
         color: defaultColor3(),
         image: const DecorationImage(
-            image: AssetImage(
-              'assets/images/background.jpg',
-            ),
-            fit: BoxFit.cover),
+          image: AssetImage(
+            'assets/images/background.jpg',
+          ),
+          fit: BoxFit.cover,
+        ),
       ),
       alignment: AlignmentDirectional.center,
       child: Column(
@@ -28,7 +29,7 @@ class choose_identity extends StatelessWidget {
           90.height,
           Container(
             alignment: AlignmentDirectional.center,
-            width: 150.w,
+            width: 160.w,
             height: 40.h,
             decoration: decoration,
             child: TextButton(
@@ -47,7 +48,7 @@ class choose_identity extends StatelessWidget {
             children: [
               Container(
                 alignment: AlignmentDirectional.center,
-                width: 150.w,
+                width: 160.w,
                 height: 40.h,
                 decoration: decoration,
                 child: TextButton(
@@ -57,7 +58,7 @@ class choose_identity extends StatelessWidget {
               ),
               Container(
                 alignment: AlignmentDirectional.center,
-                width: 154.w,
+                width: 165.w,
                 height: 40.h,
                 decoration: decoration,
                 child: TextButton(

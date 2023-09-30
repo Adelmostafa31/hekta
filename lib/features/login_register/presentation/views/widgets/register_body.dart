@@ -34,7 +34,7 @@ class register_body extends StatelessWidget {
                 children: [
                   text_form(
                     readOnly: false,
-                    width: 55.w,
+                    width: 65.w,
                     hint: '+20',
                     color: defaultColor4(),
                     obscure: false,
@@ -44,7 +44,7 @@ class register_body extends StatelessWidget {
                   10.width,
                   text_form(
                     readOnly: true,
-                    width: MediaQuery.sizeOf(context).width - (65.w + 30.r),
+                    width: MediaQuery.sizeOf(context).width - (75.w + 30.r),
                     hint: '| Your Mobile Number',
                     color: defaultColor4(),
                     obscure: false,

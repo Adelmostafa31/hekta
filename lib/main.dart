@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/styles/themes/ThemeData.dart';
-import 'package:hekta/features/login_register/presentation/views/choose_identity.dart';
+import 'package:hekta/features/splash/presentation/views/splash.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +26,7 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
         theme: lightTheme,
-        home: const choose_identity(),
+        home: const splash(),
       ),
     );
   }
