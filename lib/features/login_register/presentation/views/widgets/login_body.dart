@@ -4,64 +4,66 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
 import 'package:hekta/core/styles/colors.dart';
-import 'package:hekta/core/widgets/text_form.dart';
-import 'package:hekta/features/login_register/presentation/views/widgets/bottom_signIn.dart';
-import 'package:hekta/features/login_register/presentation/views/widgets/text_terms.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/login_button.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/signUp_navigate_button.dart';
 
 class login_body extends StatelessWidget {
   const login_body({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var phoneController = TextEditingController();
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(15.r),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      body: Column(
+        children: [
+          Stack(
+            alignment: AlignmentDirectional.bottomCenter,
             children: [
-              Text(
-                'Sign In to Hekta',
-                style: style2,
+              SizedBox(
+                height: MediaQuery.sizeOf(context).height - 400.h,
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image(
+                      image: AssetImage('assets/images/CH_LOG.png'),
+                    ),
+                  ],
+                ),
               ),
-              Text(
-                'Please enter your mobile number to login',
-                style: style3,
-              ),
-              40.height,
-              Row(
-                children: [
-                  text_form(
-                    readOnly: false,
-                    width: 65.w,
-                    hint: '+20',
-                    color: defaultColor4(),
-                    obscure: false,
-                    hintFont: 18.sp,
-                    type: TextInputType.number,
+              Container(
+                margin: EdgeInsets.only(bottom: 5.h),
+                width: double.infinity,
+                height: 80.h,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(60),
+                    topRight: Radius.circular(60),
                   ),
-                  10.width,
-                  text_form(
-                    readOnly: true,
-                    width: MediaQuery.sizeOf(context).width - (75.w + 30.r),
-                    hint: '| Your Mobile Number',
-                    color: defaultColor4(),
-                    obscure: false,
-                    hintFont: 18.sp,
-                    type: TextInputType.number,
-                    controller: phoneController,
-                  ),
-                ],
-              ),
-              const Spacer(),
-              const bottom_signIn(),
-              10.height,
-              const text_terms()
+                ),
+              )
             ],
           ),
-        ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Join our platform!',
+                style: styleBold(color: defaultColor2(), size: 29.w),
+              ),
+              Text(
+                'Here is unlimited shopping....',
+                style: style(color: defaultColor2().withOpacity(0.6), size: 19.w),
+              ),
+              50.height,
+              const login_button(),
+              30.height,
+              const signUp_navigate_button(),
+            ],
+          ),
+        ],
       ),
     );
   }
 }
+
+

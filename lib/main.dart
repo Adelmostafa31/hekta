@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/styles/themes/ThemeData.dart';
-import 'package:hekta/features/splash/presentation/views/splash.dart';
+import 'package:hekta/features/login_register/presentation/views/signUp.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Future.delayed(const Duration(milliseconds: 500));
-  FlutterNativeSplash.remove();
-  runApp(const MainApp());
+  runApp(const Hekta());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class Hekta extends StatelessWidget {
+  const Hekta({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size(430, 932),
       minTextAdapt: true,
       splitScreenMode: true,
       ensureScreenSize: true,
@@ -26,7 +23,7 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
         theme: lightTheme,
-        home: const splash(),
+        home: const signUp()
       ),
     );
   }

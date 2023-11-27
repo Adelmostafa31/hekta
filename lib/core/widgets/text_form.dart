@@ -13,7 +13,7 @@ class text_form extends StatelessWidget {
     this.controller,
     this.hintFont,
     this.validate,
-    this.height,
+    // this.height,
     this.width,
     this.readOnly,
     this.color,
@@ -25,18 +25,17 @@ class text_form extends StatelessWidget {
   double? hintFont = 16;
   Color? color = defaultColor1();
   double? width = double.infinity;
-  double? height = 100;
+
   FormFieldValidator? validate;
   bool? readOnly = false;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
-      height: height,
       child: TextFormField(
         autocorrect: true,
         enabled: readOnly!,
-        cursorColor: defaultColor1(),
+        cursorColor: defaultColor2(),
         controller: controller,
         keyboardType: type,
         validator: validate,
@@ -52,10 +51,8 @@ class text_form extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hint,
           hoverColor: defaultColor2(),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5),
-          ),
-          focusColor: defaultColor1(),
+          border: const OutlineInputBorder(borderSide: BorderSide.none),
+          focusColor: defaultColor2(),
           hintStyle: TextStyle(
             color: color,
             fontSize: hintFont,

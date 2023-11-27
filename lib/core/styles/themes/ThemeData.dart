@@ -48,7 +48,7 @@ ThemeData darkTheme = ThemeData(
 
 ThemeData lightTheme = ThemeData(
   useMaterial3: true,
-  primarySwatch: Colors.red,
+  primarySwatch: Colors.orange,
   scaffoldBackgroundColor: Colors.white,
   appBarTheme: const AppBarTheme(
     titleSpacing: 21,

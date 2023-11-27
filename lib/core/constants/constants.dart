@@ -11,28 +11,31 @@ var shadow = BoxShadow(
   offset: const Offset(0, 5),
 );
 
-TextStyle style1 = TextStyle(
-  color: defaultColor3(),
-  decoration: TextDecoration.none,
-  fontSize: 18.sp,
-  fontWeight: FontWeight.bold,
-  fontFamily: 'com',
-);
-TextStyle style2 = TextStyle(
-  fontSize: 25.sp,
-  color: defaultColor5(),
-  fontWeight: FontWeight.bold,
-  fontFamily: 'com',
-);
-TextStyle style3 = TextStyle(
-  fontSize: 14.sp,
-  color: defaultColor4(),
-  fontFamily: 'com',
-);
+TextStyle style({required Color color, required double size}) => TextStyle(
+      color: color,
+      fontSize: size,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'com',
+    );
+TextStyle styleBold({required Color color, required double size}) => TextStyle(
+      fontSize: size,
+      color: color,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'com',
+    );
 
-BoxDecoration decoration = BoxDecoration(
-  color: defaultColor1(),
-  borderRadius: BorderRadius.circular(10.r),
+BoxDecoration decoration({required Color color}) => BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(25.r),
+    );
+BoxDecoration decoration_form_feild = BoxDecoration(
+  borderRadius: BorderRadius.circular(20),
+  border: Border(
+    bottom: BorderSide(color: defaultColor2()),
+    top: BorderSide(color: defaultColor2()),
+    left: BorderSide(color: defaultColor2()),
+    right: BorderSide(color: defaultColor2()),
+  ),
 );
 
 Future<dynamic> navigator(
