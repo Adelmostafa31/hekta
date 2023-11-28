@@ -92,3 +92,22 @@ ToastFuture toast({
       curve: Curves.fastLinearToSlowEaseIn,
       reverseCurve: Curves.fastLinearToSlowEaseIn,
     );
+
+
+
+Duration mainTransitionDuration=const Duration(milliseconds: 250);
+
+EdgeInsetsDirectional paddingBuilder({
+  double start = 0.0,
+  double end = 0.0,
+  double top = 0.0,
+  double bottom = 0.0,
+})
+{
+  return EdgeInsetsDirectional.only(
+      start: start,
+      end: end,
+      top: top,
+      bottom: bottom
+  );
+}
