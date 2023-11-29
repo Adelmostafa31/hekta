@@ -1,20 +1,23 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:hekta/core/constants/assets.dart';
 import 'package:hekta/core/constants/constants.dart';
 
-class app_bar_home extends StatelessWidget {
-  const app_bar_home({Key? key}) : super(key: key);
+class app_bar_offer extends StatelessWidget {
+  const app_bar_offer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: paddingBuilder(
         start: 17,
-        top: 26,
+        top: 10,
         end: 17,
       ),
       child: Row(
         children: [
+          backButton(context: context),
           const Image(
             image: AssetImage(Assets.imagesLogo2),
             height: 55,

@@ -8,8 +8,8 @@ import 'package:hekta/core/styles/colors.dart';
 import 'package:hekta/features/home/presentations/views/widgets/home_top_logo.dart';
 import 'package:hekta/features/home/presentations/views/widgets/rating.dart';
 
-class top_home extends StatelessWidget {
-  const top_home({Key? key}) : super(key: key);
+class top_offer extends StatelessWidget {
+  const top_offer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

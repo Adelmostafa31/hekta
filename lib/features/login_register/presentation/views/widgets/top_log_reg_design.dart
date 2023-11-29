@@ -21,17 +21,7 @@ class top_log_reg_design extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            IconButton(
-              padding: EdgeInsets.only(left: 20.w),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(
-                Icons.arrow_back_ios,
-                size: 37.h,
-                color: defaultColor1(),
-              ),
-            ),
+            backButton(context: context),
             30.width,
             Image(
               image: const AssetImage(

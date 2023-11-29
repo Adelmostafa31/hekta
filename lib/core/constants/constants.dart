@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+import 'package:hekta/core/styles/colors.dart';
 import 'package:page_transition/page_transition.dart';
 
 var shadow = BoxShadow(
@@ -13,7 +14,6 @@ var shadow = BoxShadow(
 TextStyle style({required Color color, required double size}) => TextStyle(
       color: color,
       fontSize: size,
-      fontWeight: FontWeight.bold,
       fontFamily: 'com',
     );
 TextStyle styleBold({required Color color, required double size}) => TextStyle(
@@ -54,6 +54,17 @@ BoxDecoration decoration_form_feild(
         right: BorderSide(color: color),
       ),
     );
+BoxDecoration orders_decoration = BoxDecoration(
+  borderRadius: const BorderRadius.only(
+    topRight: Radius.circular(10),
+    bottomRight: Radius.circular(10),
+  ),
+  border: Border(
+    bottom: BorderSide(color: defaultColor2()),
+    top: BorderSide(color: defaultColor2()),
+    right: BorderSide(color: defaultColor2()),
+  ),
+);
 
 Future<dynamic> navigator(
         {required BuildContext context, required Widget widget}) =>
@@ -121,3 +132,15 @@ EdgeInsetsDirectional paddingBuilder({
   return EdgeInsetsDirectional.only(
       start: start, end: end, top: top, bottom: bottom);
 }
+
+Widget backButton({required BuildContext context}) => IconButton(
+      padding: EdgeInsets.only(left: 5.w),
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      icon: Icon(
+        Icons.arrow_back_ios,
+        size: 37.h,
+        color: defaultColor1(),
+      ),
+    );

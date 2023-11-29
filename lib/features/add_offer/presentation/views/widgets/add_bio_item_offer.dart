@@ -8,8 +8,8 @@ import 'package:hekta/core/widgets/text_form.dart';
 import 'package:hekta/features/add_offer/presentation/views/add_offer.dart';
 import 'package:hekta/features/home/presentations/views/widgets/add_item_home.dart';
 
-class add_bio_item extends StatelessWidget {
-  const add_bio_item({Key? key}) : super(key: key);
+class add_bio_item_offer extends StatelessWidget {
+  const add_bio_item_offer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
