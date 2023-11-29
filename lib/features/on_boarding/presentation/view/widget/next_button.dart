@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
 import 'package:hekta/core/constants/list_onBording_model.dart';
 import 'package:hekta/core/styles/colors.dart';
-import 'package:hekta/features/login_register/presentation/views/login.dart';
+import 'package:hekta/features/login_register/presentation/views/choose_log_reg.dart';
 
 // ignore: must_be_immutable
 class next_button extends StatelessWidget {
@@ -38,9 +38,9 @@ class next_button extends StatelessWidget {
         );
         if (onBoardingPageViewList.length == 2) isThird = true;
         if (isThird) {
-          navigator(
+          navigatorPushRemove(
             context: context,
-            widget: const login(),
+            widget: const choose_log_reg(),
           );
         }
       },

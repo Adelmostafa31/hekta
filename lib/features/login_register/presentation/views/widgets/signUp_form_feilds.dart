@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,7 +6,7 @@ import 'package:hekta/core/constants/constants.dart';
 import 'package:hekta/core/styles/colors.dart';
 import 'package:hekta/core/widgets/text_form.dart';
 import 'package:hekta/features/login_register/presentation/views/widgets/signUp_button.dart';
-import 'package:hekta/features/login_register/presentation/views/widgets/top_signUp_design.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/top_log_reg_design.dart';
 import 'package:hekta/features/login_register/presentation/views/widgets/upload_video.dart';
 
 class signUp_form_feilds extends StatelessWidget {
@@ -24,7 +24,10 @@ class signUp_form_feilds extends StatelessWidget {
     var passwordController = TextEditingController();
     return Column(
       children: [
-        const top_signUp_design(),
+        const top_log_reg_design(
+          text1: 'Let\'s get you signup',
+          text2: 'Signup now to start your online shop',
+        ),
         20.height,
         Container(
           height: 60,

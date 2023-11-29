@@ -1,7 +1,8 @@
-// ignore_for_file: must_be_immutable, unrelated_type_equality_checks, camel_case_types
+// ignore_for_file: must_be_immutable, unrelated_type_equality_checks, camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hekta/core/constants/constants.dart';
 import 'package:hekta/features/on_boarding/presentation/view/widget/next_button.dart';
 import 'package:hekta/features/on_boarding/presentation/view/widget/smooth_indecator.dart';
 import 'package:hekta/features/on_boarding/presentation/view/widget/text_page_view.dart';
@@ -64,9 +65,7 @@ class onBoarding_body extends StatelessWidget {
                               isInner: isInner,
                               outerPageController: outerPageController,
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            20.height,
                             Padding(
                               padding: const EdgeInsetsDirectional.only(
                                 start: 20,
