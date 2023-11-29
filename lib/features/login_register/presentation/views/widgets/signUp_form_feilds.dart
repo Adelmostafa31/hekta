@@ -32,7 +32,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Email',
             obscure: false,
@@ -47,7 +47,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Phone Number',
             obscure: false,
@@ -62,7 +62,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Shop Name',
             obscure: false,
@@ -77,7 +77,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Location',
             obscure: false,
@@ -92,7 +92,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Boss Name',
             obscure: false,
@@ -107,7 +107,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Password',
             obscure: true,

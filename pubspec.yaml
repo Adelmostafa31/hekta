@@ -1,10 +1,10 @@
 name: hekta
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.1.2 <4.0.0'
+  sdk: ">=3.1.2 <4.0.0"
 
 dependencies:
   flutter_svg: ^2.0.7
@@ -17,6 +17,7 @@ dependencies:
   tab_indicator_styler: ^2.0.0
   salomon_bottom_bar: ^3.3.2
   page_transition: ^2.0.9
+  flutter_rating_stars: ^1.0.3+4
   flutter:
     sdk: flutter
 
@@ -25,15 +26,11 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
 
-
 flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/constants/
   filename: assets.dart
   field_prefix:
-
-
-
 
 flutter:
   assets:

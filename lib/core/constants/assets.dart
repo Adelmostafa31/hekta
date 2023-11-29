@@ -17,6 +17,14 @@ class Assets {
   /// assets/images/chat_nav_bar.png
   static const String imagesChatNavBar = "assets/images/chat_nav_bar.png";
 
+  /// Assets for imagesEdit
+  /// assets/images/Edit.png
+  static const String imagesEdit = "assets/images/Edit.png";
+
+  /// Assets for imagesEduGamePhoto
+  /// assets/images/eduGamePhoto.png
+  static const String imagesEduGamePhoto = "assets/images/eduGamePhoto.png";
+
   /// Assets for imagesLogo
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";
@@ -37,6 +45,14 @@ class Assets {
   /// assets/images/onBoarding3.png
   static const String imagesOnBoarding3 = "assets/images/onBoarding3.png";
 
+  /// Assets for imagesProfile
+  /// assets/images/profile.png
+  static const String imagesProfile = "assets/images/profile.png";
+
+  /// Assets for imagesShippingTruck
+  /// assets/images/shipping_truck.png
+  static const String imagesShippingTruck = "assets/images/shipping_truck.png";
+
   /// Assets for imagesShopOnTheBottomNav
   /// assets/images/shop_on_the_bottomNav.png
   static const String imagesShopOnTheBottomNav = "assets/images/shop_on_the_bottomNav.png";
@@ -48,4 +64,12 @@ class Assets {
   /// Assets for imagesSplash
   /// assets/images/splash.png
   static const String imagesSplash = "assets/images/splash.png";
+
+  /// Assets for imagesTicket
+  /// assets/images/ticket.png
+  static const String imagesTicket = "assets/images/ticket.png";
+
+  /// Assets for imagesTshirt
+  /// assets/images/Tshirt.jpg
+  static const String imagesTshirt = "assets/images/Tshirt.jpg";
 }

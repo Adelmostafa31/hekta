@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
-import 'package:hekta/core/styles/colors.dart';
 import 'package:page_transition/page_transition.dart';
 
 var shadow = BoxShadow(
@@ -23,20 +22,38 @@ TextStyle styleBold({required Color color, required double size}) => TextStyle(
       fontWeight: FontWeight.bold,
       fontFamily: 'com',
     );
+TextStyle navBarStyle() => TextStyle(
+      color: Colors.white,
+      fontSize: 17.sp,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'com',
+    );
 
+ShapeDecoration shape({required Color color}) => ShapeDecoration(
+      color: color,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.37),
+      ),
+    );
+ShapeDecoration shape2 = ShapeDecoration(
+  color: const Color(0xFFD9D9D9),
+  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+);
 BoxDecoration decoration({required Color color}) => BoxDecoration(
       color: color,
       borderRadius: BorderRadius.circular(25.r),
     );
-BoxDecoration decoration_form_feild = BoxDecoration(
-  borderRadius: BorderRadius.circular(20),
-  border: Border(
-    bottom: BorderSide(color: defaultColor2()),
-    top: BorderSide(color: defaultColor2()),
-    left: BorderSide(color: defaultColor2()),
-    right: BorderSide(color: defaultColor2()),
-  ),
-);
+BoxDecoration decoration_form_feild(
+        {Color color = const Color.fromARGB(255, 255, 128, 0)}) =>
+    BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+      border: Border(
+        bottom: BorderSide(color: color),
+        top: BorderSide(color: color),
+        left: BorderSide(color: color),
+        right: BorderSide(color: color),
+      ),
+    );
 
 Future<dynamic> navigator(
         {required BuildContext context, required Widget widget}) =>
@@ -93,21 +110,14 @@ ToastFuture toast({
       reverseCurve: Curves.fastLinearToSlowEaseIn,
     );
 
-
-
-Duration mainTransitionDuration=const Duration(milliseconds: 250);
+Duration mainTransitionDuration = const Duration(milliseconds: 250);
 
 EdgeInsetsDirectional paddingBuilder({
   double start = 0.0,
   double end = 0.0,
   double top = 0.0,
   double bottom = 0.0,
-})
-{
+}) {
   return EdgeInsetsDirectional.only(
-      start: start,
-      end: end,
-      top: top,
-      bottom: bottom
-  );
+      start: start, end: end, top: top, bottom: bottom);
 }
