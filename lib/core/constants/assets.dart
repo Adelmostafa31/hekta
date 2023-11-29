@@ -36,15 +36,26 @@ class Assets {
   /// assets/images/chat_nav_bar.png
   static const String chatNavigation = "assets/images/chat_nav_bar.png";
 
-  /// Assets for chat shopCart On The BottomNav
+  /// Assets for  shopCart On The BottomNav
   /// assets/images/shopcart_on_the_bottomNav.png
   static const String shopCartNavigation = "assets/images/shopcart_on_the_bottomNav.png";
 
-  /// Assets for chat addChatNavigation On The BottomNav
+  /// Assets for  addChatNavigation On The BottomNav
   /// assets/images/add_chat_nav_bar.png
   static const String addChatNavigation = "assets/images/add_chat_nav_bar.png";
 
-  /// Assets for chat bar Graph On The BottomNav
+  /// Assets for  bar Graph On The BottomNav
   /// assets/images/bar_graph_on_nav_bar.png
   static const String barGraphNavigation = "assets/images/bar_graph_on_nav_bar.png";
+  /// Assets for profile Home Icon on the right side
+  /// assets/images/profile.png
+  static const String profileHomeIcon = "assets/images/profile.png";
+
+  /// Assets for profile Home Icon on the right side
+  /// assets/images/profile.png
+  static const String eduGamePhoto = "assets/images/eduGamePhoto.png";
+
+  /// Assets for profile Home Icon on the right side
+  /// assets/images/profile.png
+  static const String shippingTruck = "assets/images/shipping_truck.png";
 }

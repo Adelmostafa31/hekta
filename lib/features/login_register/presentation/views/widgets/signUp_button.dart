@@ -21,7 +21,7 @@ class signUp_button extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const layout_screen()));
+                  MaterialPageRoute(builder: (context) =>  layout_screen()));
             },
             child: Container(
               alignment: AlignmentDirectional.center,
