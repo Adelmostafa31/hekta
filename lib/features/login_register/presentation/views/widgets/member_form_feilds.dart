@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
 import 'package:hekta/core/styles/colors.dart';
 import 'package:hekta/core/widgets/text_form.dart';
+import 'package:hekta/features/home_layout/presenation/view/layout_screen.dart';
 
 class member_form_feilds extends StatelessWidget {
   const member_form_feilds({super.key});
@@ -48,7 +49,10 @@ class member_form_feilds extends StatelessWidget {
           ),
           80.height,
           InkWell(
-            onTap: () {},
+            onTap: () {
+              navigatorPushRemove(
+                  context: context, widget: const layout_screen());
+            },
             child: Container(
               alignment: Alignment.center,
               height: 70.h,

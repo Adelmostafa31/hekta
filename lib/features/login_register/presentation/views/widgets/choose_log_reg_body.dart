@@ -32,7 +32,7 @@ class choose_log_reg_body extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(bottom: 5.h),
                 width: double.infinity,
-                height: 80.h,
+                height: 105.h,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
