@@ -23,6 +23,13 @@ TextStyle styleBold({required Color color, required double size}) => TextStyle(
       fontWeight: FontWeight.bold,
       fontFamily: 'com',
     );
+TextStyle navBarStyle() => const TextStyle(
+  color: Colors.white,
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  height: 0,
+  letterSpacing: 0.12,
+);
 
 BoxDecoration decoration({required Color color}) => BoxDecoration(
       color: color,
