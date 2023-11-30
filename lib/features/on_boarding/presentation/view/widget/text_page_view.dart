@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, camel_case_types
+// ignore_for_file: must_be_immutable, camel_case_types, unrelated_type_equality_checks
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,16 +1,14 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
 import 'package:hekta/core/styles/colors.dart';
 import 'package:hekta/core/widgets/text_form.dart';
-import 'package:hekta/features/login_register/presentation/views/widgets/signUp_button.dart';
-import 'package:hekta/features/login_register/presentation/views/widgets/top_signUp_design.dart';
-import 'package:hekta/features/login_register/presentation/views/widgets/upload_video.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/top_log_reg_design.dart';
 
-class signUp_form_feilds extends StatelessWidget {
-  const signUp_form_feilds({
+class editPro_SignUp_form_field extends StatelessWidget {
+  const editPro_SignUp_form_field({
     super.key,
   });
 
@@ -24,12 +22,11 @@ class signUp_form_feilds extends StatelessWidget {
     var passwordController = TextEditingController();
     return Column(
       children: [
-        const top_signUp_design(),
-        20.height,
+
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Email',
             obscure: false,
@@ -44,7 +41,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Phone Number',
             obscure: false,
@@ -59,7 +56,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Shop Name',
             obscure: false,
@@ -74,7 +71,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Location',
             obscure: false,
@@ -89,7 +86,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Boss Name',
             obscure: false,
@@ -104,7 +101,7 @@ class signUp_form_feilds extends StatelessWidget {
         Container(
           height: 60,
           margin: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: decoration_form_feild,
+          decoration: decoration_form_feild(),
           child: text_form(
             hint: 'Password',
             obscure: true,
@@ -115,11 +112,6 @@ class signUp_form_feilds extends StatelessWidget {
             color: defaultColor4().withOpacity(0.5),
           ),
         ),
-        20.height,
-        const upload_video(),
-        20.height,
-        const signUp_button(),
-        20.height,
       ],
     );
   }

@@ -1,0 +1,82 @@
+// ignore_for_file: camel_case_types
+
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hekta/core/constants/constants.dart';
+import 'package:hekta/core/styles/colors.dart';
+import 'package:hekta/core/widgets/text_form.dart';
+
+class shop_form_feilds extends StatelessWidget {
+  const shop_form_feilds({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var emailController = TextEditingController();
+    var phoneController = TextEditingController();
+    var passwordController = TextEditingController();
+    return Padding(
+      padding: EdgeInsets.only(top: 30.h),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: 60,
+              margin: EdgeInsets.symmetric(horizontal: 15.w),
+              decoration: decoration_form_feild(),
+              child: text_form(
+                hint: 'Email',
+                obscure: false,
+                type: TextInputType.emailAddress,
+                controller: emailController,
+                width: double.infinity,
+                readOnly: true,
+                color: defaultColor4().withOpacity(0.5),
+              ),
+            ),
+            20.height,
+            Container(
+              height: 60,
+              margin: EdgeInsets.symmetric(horizontal: 15.w),
+              decoration: decoration_form_feild(),
+              child: text_form(
+                hint: 'Phone Number',
+                obscure: false,
+                type: TextInputType.phone,
+                controller: phoneController,
+                width: double.infinity,
+                readOnly: true,
+                color: defaultColor4().withOpacity(0.5),
+              ),
+            ),
+            20.height,
+            Container(
+              height: 60,
+              margin: EdgeInsets.symmetric(horizontal: 15.w),
+              decoration: decoration_form_feild(),
+              child: text_form(
+                hint: 'Password',
+                obscure: true,
+                type: TextInputType.emailAddress,
+                controller: passwordController,
+                width: double.infinity,
+                readOnly: true,
+                color: defaultColor4().withOpacity(0.5),
+              ),
+            ),
+            80.height,
+            InkWell(
+              onTap: (){},
+              child: Container(
+                alignment: Alignment.center,
+                height: 70.h,
+                width: 150.w,
+                decoration: decoration(color: defaultColor2()),
+                child: Text('Login',style: styleBold(color: defaultColor3(), size: 30.sp),),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

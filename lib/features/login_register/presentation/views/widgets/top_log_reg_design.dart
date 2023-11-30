@@ -5,10 +5,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
 import 'package:hekta/core/styles/colors.dart';
 
-class top_signUp_design extends StatelessWidget {
-  const top_signUp_design({
-    super.key,
+class top_log_reg_design extends StatelessWidget {
+  const top_log_reg_design({
+    super.key, required this.text1, required this.text2,
   });
+  final String text1;
+  final String text2;
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +21,7 @@ class top_signUp_design extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            IconButton(
-              padding: EdgeInsets.only(left: 20.w),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(
-                Icons.arrow_back_ios,
-                size: 37.h,
-                color: defaultColor1(),
-              ),
-            ),
+            backButton(context: context),
             30.width,
             Image(
               image: const AssetImage(
@@ -42,12 +34,12 @@ class top_signUp_design extends StatelessWidget {
         ),
         20.height,
         Text(
-          'Let\'s get you signup',
+          text1,
           style: styleBold(color: defaultColor5(), size: 29.sp),
         ),
         7.height,
         Text(
-          'Signup now to start your online shop',
+          text2,
           style: styleBold(
             color: defaultColor5().withOpacity(0.5),
             size: 12.sp,

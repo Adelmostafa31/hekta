@@ -18,6 +18,7 @@ class text_form extends StatelessWidget {
     this.readOnly,
     this.color,
   });
+
   final String hint;
   final bool obscure;
   final TextInputType type;
@@ -28,6 +29,7 @@ class text_form extends StatelessWidget {
 
   FormFieldValidator? validate;
   bool? readOnly = false;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

@@ -3,9 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
-import 'package:hekta/core/styles/colors.dart';
-import 'package:hekta/features/login_register/presentation/views/widgets/login_button.dart';
-import 'package:hekta/features/login_register/presentation/views/widgets/signUp_navigate_button.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/member_form_feilds.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/shop_form_feilds.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/tab_bar_indecator.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/top_log_reg_design.dart';
 
 class login_body extends StatelessWidget {
   const login_body({super.key});
@@ -13,57 +14,39 @@ class login_body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Stack(
-            alignment: AlignmentDirectional.bottomCenter,
-            children: [
-              SizedBox(
-                height: MediaQuery.sizeOf(context).height - 400.h,
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+      body: SafeArea(
+        child: Scaffold(
+          body: SafeArea(
+            child: Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(top: 53.h),
+              child: DefaultTabController(
+                length: 2,
+                initialIndex: 0,
+                child: Column(
                   children: [
-                    Image(
-                      image: AssetImage('assets/images/CH_LOG.png'),
+                    const top_log_reg_design(
+                      text1: 'Welcome back',
+                      text2: '',
+                    ),
+                    50.height,
+                    const tab_bar_indicator(),
+                    10.height,
+                    const Expanded(
+                      child: TabBarView(
+                        children: [
+                          member_form_feilds(),
+                          shop_form_feilds()
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(bottom: 5.h),
-                width: double.infinity,
-                height: 80.h,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(60),
-                    topRight: Radius.circular(60),
-                  ),
-                ),
-              )
-            ],
+            ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'Join our platform!',
-                style: styleBold(color: defaultColor2(), size: 29.w),
-              ),
-              Text(
-                'Here is unlimited shopping....',
-                style: style(color: defaultColor2().withOpacity(0.6), size: 19.w),
-              ),
-              50.height,
-              const login_button(),
-              30.height,
-              const signUp_navigate_button(),
-            ],
-          ),
-        ],
+        ),
       ),
     );
   }
 }
-
-

@@ -1,9 +1,9 @@
-
-// ignore_for_file: camel_case_types, must_be_immutable
+// ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:hekta/core/constants/constants.dart';
 
+// ignore: must_be_immutable
 class onBoarding_page_view extends StatelessWidget {
   Widget? bigText;
 

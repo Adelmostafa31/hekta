@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:hekta/core/constants/assets.dart';
 import 'package:hekta/features/on_boarding/data/Model/on_boarding_model.dart';
