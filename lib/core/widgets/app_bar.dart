@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hekta/core/constants/assets.dart';
 import 'package:hekta/core/constants/constants.dart';
+import 'package:hekta/features/edit_profile/presentation/views/edit_profile.dart';
 
 class app_bar extends StatelessWidget {
   const app_bar({super.key});
@@ -25,7 +26,7 @@ class app_bar extends StatelessWidget {
           const Spacer(),
           InkWell(
             onTap: () {
-              // navigator(context: context, widget: const profile());
+              navigator(context: context, widget: const edit_profile());
             },
             child: const Column(
               children: [

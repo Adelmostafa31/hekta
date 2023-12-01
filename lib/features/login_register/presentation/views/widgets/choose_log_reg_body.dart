@@ -19,7 +19,7 @@ class choose_log_reg_body extends StatelessWidget {
             alignment: AlignmentDirectional.bottomCenter,
             children: [
               SizedBox(
-                height: MediaQuery.sizeOf(context).height - 400.h,
+                height: MediaQuery.sizeOf(context).height - 380.h,
                 child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -30,7 +30,6 @@ class choose_log_reg_body extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 5.h),
                 width: double.infinity,
                 height: 105.h,
                 decoration: const BoxDecoration(
@@ -52,7 +51,8 @@ class choose_log_reg_body extends StatelessWidget {
               ),
               Text(
                 'Here is unlimited shopping....',
-                style: style(color: defaultColor2().withOpacity(0.6), size: 19.w),
+                style:
+                    style(color: defaultColor2().withOpacity(0.6), size: 19.w),
               ),
               50.height,
               const login_navigate_button(),
@@ -65,5 +65,3 @@ class choose_log_reg_body extends StatelessWidget {
     );
   }
 }
-
-
