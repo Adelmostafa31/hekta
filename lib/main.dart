@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/bloc_observer.dart';
 import 'package:hekta/core/styles/themes/ThemeData.dart';
-import 'package:hekta/features/login_register/presentation/views/otp.dart';
+import 'package:hekta/features/on_boarding/presentation/view/on_boarding_home.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +26,7 @@ class Hekta extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
         theme: lightTheme,
-        home: const otp()
+        home: const onBoarding()
       ),
     );
   }

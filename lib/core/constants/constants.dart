@@ -1,4 +1,5 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_typing_uninitialized_variables
+import 'package:easy_stepper/easy_stepper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
@@ -144,3 +145,15 @@ Widget backButton({required BuildContext context}) => IconButton(
         color: defaultColor1(),
       ),
     );
+
+LineStyle lineSytle = LineStyle(
+  lineLength: 70,
+  lineType: LineType.normal,
+  lineThickness: 1,
+  lineSpace: 0,
+  unreachedLineColor: Colors.grey.withOpacity(0.5),
+  finishedLineColor: const Color.fromARGB(255, 255, 128, 0),
+  activeLineColor: Colors.grey.withOpacity(0.5),
+  lineWidth: 1,
+  unreachedLineType: LineType.normal,
+);

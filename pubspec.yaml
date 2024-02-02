@@ -18,6 +18,7 @@ dependencies:
   salomon_bottom_bar: ^3.3.2
   page_transition: ^2.0.9
   flutter_rating_stars: ^1.0.3+4
+  easy_stepper: ^0.8.3
   flutter:
     sdk: flutter
 

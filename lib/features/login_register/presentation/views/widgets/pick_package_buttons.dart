@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
 import 'package:hekta/core/styles/colors.dart';
+import 'package:hekta/features/payment/presentation/views/payments.dart';
 
 // ignore: camel_case_types
 class pickPackageButtons extends StatelessWidget {
@@ -33,7 +34,9 @@ class pickPackageButtons extends StatelessWidget {
           ),
           const Spacer(),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              navigator(context: context, widget: const payments());
+            },
             child: Container(
               alignment: AlignmentDirectional.center,
               height: 50.h,
