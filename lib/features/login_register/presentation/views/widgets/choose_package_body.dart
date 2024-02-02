@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hekta/core/constants/constants.dart';
+import 'package:hekta/core/styles/colors.dart';
 import 'package:hekta/features/login_register/presentation/views/widgets/item_package.dart';
+import 'package:hekta/features/login_register/presentation/views/widgets/pick_package_buttons.dart';
 import 'package:hekta/features/login_register/presentation/views/widgets/top_log_reg_design.dart';
 
 class choose_package_body extends StatelessWidget {
@@ -16,12 +18,13 @@ class choose_package_body extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(
             right: 12.w,
-            top: 20.h,
+            top: 10.h,
             left: 12.w,
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              50.height,
+              30.height,
               const top_log_reg_design(text1: 'Pick-Up Package', text2: ''),
               GridView.builder(
                 itemCount: 4,
@@ -35,11 +38,23 @@ class choose_package_body extends StatelessWidget {
                 ),
                 itemBuilder: (constext, index) => const itemPackage(),
               ),
-              Row(
-                children: [
-                  
-                ],
-              )
+              5.height,
+              Text(
+                '*Each branch will have it’s own subscription payment-fees monthly',
+                style: style(
+                  color: defaultColor5().withOpacity(0.5),
+                  size: 11.sp,
+                ),
+              ),
+              3.height,
+              Text(
+                '*paying for a package is just for one branch',
+                style: style(
+                  color: defaultColor5().withOpacity(0.5),
+                  size: 11.sp,
+                ),
+              ),
+              const pickPackageButtons()
             ],
           ),
         ),
