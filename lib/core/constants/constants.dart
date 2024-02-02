@@ -134,7 +134,7 @@ EdgeInsetsDirectional paddingBuilder({
 }
 
 Widget backButton({required BuildContext context}) => IconButton(
-      padding: EdgeInsets.only(left: 5.w),
+      padding: EdgeInsets.only(left: 10.w),
       onPressed: () {
         Navigator.pop(context);
       },

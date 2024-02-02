@@ -16,31 +16,31 @@ class login_body extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Scaffold(
-          body: SafeArea(
-            child: Container(
-              width: double.infinity,
-              margin: EdgeInsets.only(top: 53.h),
-              child: DefaultTabController(
-                length: 2,
-                initialIndex: 0,
-                child: Column(
-                  children: [
-                    const top_log_reg_design(
-                      text1: 'Welcome back',
-                      text2: '',
-                    ),
-                    50.height,
-                    const tab_bar_indecator(),
-                    10.height,
-                    const Expanded(
-                      child: TabBarView(
-                        children: [
-                          member_form_feilds(),
-                          shop_form_feilds()
-                        ],
+          body: SingleChildScrollView(
+            child: SafeArea(
+              child: Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(top: 53.h),
+                child: DefaultTabController(
+                  length: 2,
+                  initialIndex: 0,
+                  child: Column(
+                    children: [
+                      const top_log_reg_design(
+                        text1: 'Welcome back',
+                        text2: '',
                       ),
-                    ),
-                  ],
+                      50.height,
+                      const tab_bar_indecator(),
+                      10.height,
+                      const SizedBox(
+                        height: 390,
+                        child: TabBarView(
+                          children: [member_form_feilds(), shop_form_feilds()],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

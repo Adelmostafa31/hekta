@@ -35,7 +35,7 @@ class top_log_reg_design extends StatelessWidget {
         20.height,
         Text(
           text1,
-          style: styleBold(color: defaultColor5(), size: 29.sp),
+          style: styleBold(color: defaultColor5(), size: 29.sp,),
         ),
         7.height,
         Text(
